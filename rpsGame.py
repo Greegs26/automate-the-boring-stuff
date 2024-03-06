@@ -12,11 +12,13 @@ while True:
     print(str(wins)+" wins, "+str(loss)+" losses, "+str(ties)+" ties.")
     print("Enter your move: (r)ock (p)aper (s)cissors or (q)uit")
     response=input()
+    random_key=random.choice(list(letters_dict.keys()))
+    versus=letters_dict[random_key]
     if response.lower()=="q":
         sys.exit()
     elif response.lower()=="r" or "p" or "s":
-        print("ok")
-        #versus=random.choice(letters)
+        #print("ok")
+        print(versus)
         #if response.lower()=="r":
             #print("ROCK versus...")
             #print()
