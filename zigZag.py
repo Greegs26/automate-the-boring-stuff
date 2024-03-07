@@ -1,25 +1,22 @@
 import time, sys
-indent = 0 # How many spaces to indent.
-indentIncreasing = True # Whether the indentation is increasing or not.
+indent = 0 #starting at no indent, using this variable to create indents and lateral movement
+indentIncreasing = True #determine the direction of the lateral movement. True going to the right, False going to the left.
 
 try:
-    while True: # The main program loop.
-        print(' ' * indent, end='')
-        print('********')
-        time.sleep(0.1) # Pause for 1/10 of a second.
+    while True:
+        print(" "*indent, end="")
+        print("********")
+        time.sleep(0.1) #pause for 0.1 seconds
 
         if indentIncreasing:
-            # Increase the number of spaces:
-            indent = indent + 1
-            if indent == 20:
-                # Change direction:
-                indentIncreasing = False
-
+            indent=indent+1
+            if indent==20:  #check if we stop moving in any direction, limit set at 20 indents
+                indentIncreasing=False
+        
         else:
-            # Decrease the number of spaces:
-            indent = indent - 1
-            if indent == 0:
-                # Change direction:
-                indentIncreasing = True
+            indent=indent-1
+            if indent==0:
+                indentIncreasing=True
+
 except KeyboardInterrupt:
     sys.exit()
