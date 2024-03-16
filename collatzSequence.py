@@ -1,4 +1,4 @@
-import sys
+import sys 
 
 def collatz(number):
     if number%2==1: #if number is odd, 3*number+1
@@ -12,4 +12,5 @@ print("Enter number:")
 user_input=int(input())
 
 while user_input!=1:
-    collatz(user_input)
+    new_number=collatz(user_input)
+    user_input=new_number
