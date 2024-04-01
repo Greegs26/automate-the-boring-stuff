@@ -3,6 +3,8 @@ import sys, time
 # note: does the collatzSequence work with decimals?? My code certainly doesnt.
 # note2: will my second while loop still work with decimals?? Nope.
 
+# added this note to test something with committing to github
+
 def collatz(number):
     if number%2==1: #if number is odd, 3*number+1
         number=3*number+1
